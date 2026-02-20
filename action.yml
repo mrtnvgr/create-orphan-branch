@@ -1,11 +1,11 @@
-name: 'create-orphan-branch'
-description: 'Create a new orphan branch if a branch with the given name does not already exist'
+name: "create-orphan-branch"
+description: "Create a new orphan branch if a branch with the given name does not already exist"
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "docker"
+  image: "Dockerfile"
   args:
     - ${{ inputs.branch-name }}
 inputs:
   branch-name:
-    description: 'Name of the branch to create'
+    description: "Name of the branch to create"
     required: true

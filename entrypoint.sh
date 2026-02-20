@@ -39,9 +39,7 @@ CURRENT_BRANCH=$(git branch --show-current)
 git checkout --orphan "$BRANCH_NAME"
 git rm -rf .
 rm -f '.gitignore'
-echo "# $BRANCH_NAME" > README.md
-git add README.md
-git commit -m 'init'
+git commit --allow-empty -m 'Initial commit'
 git push origin "$BRANCH_NAME"
 
 # cleanup
